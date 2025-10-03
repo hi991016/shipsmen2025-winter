@@ -346,7 +346,7 @@
         visibility: hidden;
         transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
         width: auto !important;
-        
+
         &.--show {
           opacity: 1;
           visibility: visible;
@@ -501,6 +501,20 @@
       height: 100%;
       overflow: hidden;
 
+      &.--black {
+        background: #262626;
+      }
+
+      &.--camp17 {
+        display: flex;
+
+        picture {
+          img {
+            object-position: top;
+          }
+        }
+      }
+
       @include maxW {
         display: flex;
         align-items: center;
@@ -516,9 +530,9 @@
       color: var(--white-cl);
 
       &.--casual {
-        top: auto;
-        bottom: 6.944vw;
-        right: 47px;
+        top: 4.861vw;
+        right: auto;
+        left: 20px;
       }
 
       h2 {
@@ -600,19 +614,8 @@
         padding: 0 5.486vw;
       }
 
-      &.--camp6 {
-        max-width: 320px;
-        padding-bottom: 20px;
-        margin-right: 20px;
-        margin-left: auto;
-
-        img {
-          object-position: bottom;
-        }
-      }
-
-      &.--camp17 {
-        padding: 0 20px;
+      &.--land {
+        padding: 0 3.611vw 0 3.194vw;
       }
 
       @include maxW {
@@ -622,25 +625,6 @@
 
         &.--medium {
           padding: 0 13.768vw;
-
-          img {
-            object-fit: contain;
-          }
-        }
-
-        &.--camp6 {
-          max-width: 233px;
-          padding-bottom: 0;
-          margin-right: auto;
-
-          img {
-            object-fit: contain;
-            object-position: center;
-          }
-        }
-
-        &.--camp17 {
-          padding: 0;
 
           img {
             object-fit: contain;
@@ -659,17 +643,8 @@
       &_wrap {
         display: grid;
         grid-template-columns: 21.127% 1fr;
-        align-items: flex-end;
-        gap: 69px;
+        gap: 16px;
         padding-left: 20px;
-
-        picture {
-          height: fit-content;
-
-          img {
-            object-fit: contain;
-          }
-        }
       }
 
       @include maxW {
