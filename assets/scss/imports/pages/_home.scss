@@ -510,6 +510,7 @@
 
         picture {
           img {
+            object-fit: contain;
             object-position: top;
           }
         }
@@ -545,8 +546,8 @@
         right: 30px;
 
         &.--casual {
-          bottom: 80px;
-          right: 30px;
+          top: 60px;
+          left: 30px;
         }
 
         h2 {
@@ -630,6 +631,14 @@
             object-fit: contain;
           }
         }
+
+        &.--land {
+          padding: 0 5.556vw;
+
+          img {
+            object-fit: contain;
+          }
+        }
       }
     }
 
@@ -645,15 +654,21 @@
         grid-template-columns: 21.127% 1fr;
         gap: 16px;
         padding-left: 20px;
+
+        picture {
+          img {
+            object-fit: contain;
+          }
+        }
       }
 
       @include maxW {
         height: calc(100% - 69px);
 
         &_wrap {
-          grid-template-columns: 1fr 28.986vw;
-          padding-left: 50px;
-          gap: 56px;
+          grid-template-columns: 1fr 61.111vw;
+          padding-left: 0;
+          gap: 11px;
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
@@ -662,11 +677,12 @@
             position: relative;
             z-index: 1;
             display: block;
-            padding-bottom: calc(400 / 120 * 100%);
+            padding-bottom: calc(500 / 253 * 100%);
 
             img {
               position: absolute;
               top: 0;
+              left: 0;
             }
           }
         }
